@@ -3,34 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>personal portfolio web</title>
+    <title>Alisher Rik — Freelance Developer &amp; Designer</title>
     <meta
       id="meta-description"
       name="description"
-      content="personal portfolio web site"
+      content="Personal portfolio of Alisher Rik — freelance developer and designer crafting fast, accessible web experiences for startups, writers, and creative teams."
     />
+    <meta property="og:title" content="Alisher Rik — Freelance Developer &amp; Designer" />
+    <meta property="og:description" content="Crafting fast, accessible web experiences. Available for freelance projects." />
+    <meta property="og:type" content="website" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body data-starter="landing">
     <div class="app-shell" data-testid="site-shell">
+
+      <!-- Header / Primary Nav -->
       <header class="app-header">
         <div class="header-brand">
-          <div class="brand-mark">p</div>
-          <span class="brand-name">personal portfolio web</span>
+          <div class="brand-mark">A</div>
+          <span class="brand-name">Alisher Rik</span>
         </div>
-        <nav class="header-nav" data-testid="primary-nav"><a href="#home" class="nav-link">Home</a></nav>
-        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="header-nav" data-testid="primary-nav">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button class="btn-primary btn-sm" type="button" id="login-trigger">Client Login</button>
+        </nav>
+        <button class="menu-toggle" data-testid="mobile-nav-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </header>
 
+      <!-- Mobile nav drawer -->
+      <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#work" class="mobile-nav-link">Work</a>
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <button class="btn-primary" type="button" id="mobile-login-trigger">Client Login</button>
+      </nav>
+
       <main>
+
+        <!-- Hero Section -->
         <section class="hero-section" id="home" data-testid="hero-section">
           <div class="hero-content">
-            <div class="hero-badge">Product</div>
-            <h1 class="hero-title" id="page-title">personal portfolio web</h1>
-            <p class="hero-subtitle">personal portfolio web site</p>
+            <div class="hero-badge">&#x2714; Available for Work</div>
+            <h1 class="hero-title" id="page-title">Building digital products<br />people actually love.</h1>
+            <p class="hero-subtitle">
+              I'm a freelance developer &amp; designer helping startups, writers, and creative
+              teams ship clean, fast, accessible web experiences — from first wireframe to
+              live deployment.
+            </p>
             <div class="hero-actions">
-              <a class="btn-primary" href="#features" data-testid="primary-cta">Get Started</a>
-              <button class="btn-secondary" type="button" data-testid="interactive-demo">See Demo</button>
+              <a class="btn-primary" href="#work" data-testid="primary-cta">View My Work</a>
+              <button class="btn-secondary" type="button" data-testid="interactive-demo">See How I Work</button>
+            </div>
+            <div class="hero-meta">
+              <span class="hero-stat"><strong>30+</strong> projects shipped</span>
+              <span class="hero-stat"><strong>5&#x2605;</strong> average rating</span>
+              <span class="hero-stat"><strong>3 days</strong> avg. response</span>
             </div>
           </div>
           <div class="hero-visual">
@@ -38,10 +71,14 @@
               <div class="hero-app-bar"><span></span><span></span><span></span></div>
               <div class="hero-app-body">
                 <div class="hero-app-sidebar">
-                  <div class="hero-nav-item">Home</div>
+                  <div class="hero-nav-item active-nav">Home</div>
+                  <div class="hero-nav-item">Work</div>
+                  <div class="hero-nav-item">Services</div>
+                  <div class="hero-nav-item">Contact</div>
                 </div>
                 <div class="hero-app-content">
                   <div class="wire-block-lg"></div>
+                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
                   <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
                 </div>
               </div>
@@ -49,65 +86,227 @@
           </div>
         </section>
 
+        <!-- Who it is for / Social proof -->
         <section class="social-proof" id="audience">
-          <span class="audience-label">Built for</span>
-          <span class="audience-tag">freelance developers</span><span class="audience-tag">writers</span><span class="audience-tag">designers</span>
+          <span class="audience-label">Trusted by</span>
+          <span class="audience-tag">&#128187; Freelance Developers</span>
+          <span class="audience-tag">&#9997; Writers &amp; Bloggers</span>
+          <span class="audience-tag">&#127912; Designers</span>
+          <span class="audience-tag">&#128640; Early-stage Startups</span>
         </section>
 
-        
-        <section class="problem-section" id="problem">
-          <div class="section-label">The Problem</div>
-          <h2 class="problem-text">establish personal brand and online presence</h2>
-        </section>
-
-        <section class="features-section" id="features" data-testid="feature-grid">
-          <div class="section-header"><div class="section-label">Features</div><h2 class="section-title">Everything you need</h2></div>
+        <!-- Services / Feature Grid -->
+        <section class="features-section" id="services" data-testid="feature-grid">
+          <div class="section-header">
+            <div class="section-label">What I Do</div>
+            <h2 class="section-title">End-to-end skills, one point of contact.</h2>
+            <p class="section-subtitle">No handoffs between agencies and freelancers — I handle the full stack and communicate clearly at every stage.</p>
+          </div>
           <div class="features-grid">
-      <div class="feature-card">
-        <span class="feature-icon">&#10024;</span>
-        <h3>login page</h3>
-        <p class="feature-desc">Designed for freelance developers.</p>
-      </div>
-      <div class="feature-card">
-        <span class="feature-icon">&#9889;</span>
-        <h3>Responsive layout</h3>
-        <p class="feature-desc">Designed for writers.</p>
-      </div></div>
-        </section>
-
-        
-        <section class="screens-section" id="screens">
-          <div class="section-header"><div class="section-label">Screens</div><h2 class="section-title">Key Pages</h2></div>
-          <div class="screens-showcase">
-    <div class="screen-card">
-      <div class="screen-preview">
-        <div class="screen-dots"><span></span><span></span><span></span></div>
-        <div class="screen-wireframe">
-          <div class="wire-header"></div>
-          <div class="wire-row"><div class="wire-block-lg"></div><div class="wire-block-sm"></div></div>
-          <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
-        </div>
-      </div>
-      <p class="screen-name">Home</p>
-    </div></div>
-        </section>
-
-        
-
-        <section class="cta-section" id="primary-cta">
-          <div class="cta-inner">
-            <h2>Ready to build?</h2>
-            <p>Tailored and concrete</p>
-            <a class="btn-primary btn-large" href="#home">Get Started Free</a>
+            <div class="feature-card">
+              <span class="feature-icon">&#128187;</span>
+              <h3>Web Development</h3>
+              <p class="feature-desc">React, vanilla JS, and static sites that load fast, rank well, and hold up under real traffic. I write code that future-you will thank present-you for.</p>
+              <ul class="feature-list">
+                <li>React &amp; Next.js</li>
+                <li>Static site generation</li>
+                <li>Performance optimization</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">&#127912;</span>
+              <h3>UI / UX Design</h3>
+              <p class="feature-desc">Interfaces that feel effortless because every decision was deliberate. From design system to pixel-perfect implementation.</p>
+              <ul class="feature-list">
+                <li>Figma prototypes</li>
+                <li>Design systems</li>
+                <li>Accessibility (WCAG AA)</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">&#9997;</span>
+              <h3>Content &amp; Copy</h3>
+              <p class="feature-desc">Strategy and copy that converts — not placeholder wireframe text. Headlines, landing pages, and case studies that tell the real story.</p>
+              <ul class="feature-list">
+                <li>Landing page copy</li>
+                <li>Case study writing</li>
+                <li>SEO foundations</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">&#128640;</span>
+              <h3>Launch Ready</h3>
+              <p class="feature-desc">CI/CD pipelines, GitHub Pages, Vercel, and Netlify deployments configured so you can ship with confidence from day one.</p>
+              <ul class="feature-list">
+                <li>GitHub Actions CI</li>
+                <li>Domain &amp; DNS setup</li>
+                <li>Analytics integration</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">&#128274;</span>
+              <h3>Client Portal</h3>
+              <p class="feature-desc">Every project comes with a secure client login to track progress, review deliverables, and approve milestones without chasing emails.</p>
+              <ul class="feature-list">
+                <li>Progress dashboard</li>
+                <li>File sharing</li>
+                <li>Milestone approvals</li>
+              </ul>
+            </div>
+            <div class="feature-card">
+              <span class="feature-icon">&#127775;</span>
+              <h3>Ongoing Support</h3>
+              <p class="feature-desc">Retainer options for teams that need a reliable dev on call — quick fixes, feature additions, and quarterly audits.</p>
+              <ul class="feature-list">
+                <li>Monthly retainers</li>
+                <li>SLA response times</li>
+                <li>Quarterly reviews</li>
+              </ul>
+            </div>
           </div>
         </section>
+
+        <!-- Work / Portfolio preview -->
+        <section class="screens-section" id="work">
+          <div class="section-header">
+            <div class="section-label">Selected Work</div>
+            <h2 class="section-title">Recent projects</h2>
+          </div>
+          <div class="screens-showcase">
+            <div class="screen-card">
+              <div class="screen-preview screen-preview--light">
+                <div class="screen-dots"><span></span><span></span><span></span></div>
+                <div class="screen-wireframe">
+                  <div class="wire-header"></div>
+                  <div class="wire-row"><div class="wire-block-lg"></div><div class="wire-block-sm"></div></div>
+                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+                </div>
+              </div>
+              <div class="screen-info">
+                <p class="screen-name">Launchpad SaaS</p>
+                <p class="screen-tags"><span class="screen-tag">React</span><span class="screen-tag">Design</span></p>
+              </div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-preview screen-preview--dark">
+                <div class="screen-dots"><span></span><span></span><span></span></div>
+                <div class="screen-wireframe">
+                  <div class="wire-header"></div>
+                  <div class="wire-row"><div class="wire-block-lg"></div></div>
+                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+                </div>
+              </div>
+              <div class="screen-info">
+                <p class="screen-name">Inkwell Blog Platform</p>
+                <p class="screen-tags"><span class="screen-tag">Next.js</span><span class="screen-tag">Content</span></p>
+              </div>
+            </div>
+            <div class="screen-card">
+              <div class="screen-preview screen-preview--accent">
+                <div class="screen-dots"><span></span><span></span><span></span></div>
+                <div class="screen-wireframe">
+                  <div class="wire-header"></div>
+                  <div class="wire-row"><div class="wire-block-sm"></div><div class="wire-block-sm"></div><div class="wire-block-sm"></div></div>
+                  <div class="wire-row"><div class="wire-block-lg"></div></div>
+                </div>
+              </div>
+              <div class="screen-info">
+                <p class="screen-name">Forma Design System</p>
+                <p class="screen-tags"><span class="screen-tag">UI/UX</span><span class="screen-tag">Figma</span></span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Process / How I Work (interactive demo target) -->
+        <section class="process-section" id="process" data-testid="interactive-demo">
+          <div class="section-header">
+            <div class="section-label">Process</div>
+            <h2 class="section-title">From idea to live in four clear steps.</h2>
+          </div>
+          <div class="process-steps">
+            <div class="process-step" data-step="1">
+              <div class="step-number">01</div>
+              <h3>Discovery Call</h3>
+              <p>30 minutes to understand your goals, constraints, and timeline. No sales pitch — just honest questions.</p>
+            </div>
+            <div class="process-step" data-step="2">
+              <div class="step-number">02</div>
+              <h3>Proposal &amp; Scoping</h3>
+              <p>A written proposal with clear deliverables, milestones, and pricing. You know exactly what you're getting.</p>
+            </div>
+            <div class="process-step" data-step="3">
+              <div class="step-number">03</div>
+              <h3>Build &amp; Review</h3>
+              <p>Weekly check-ins and async updates via your client portal. You review and approve each milestone.</p>
+            </div>
+            <div class="process-step" data-step="4">
+              <div class="step-number">04</div>
+              <h3>Launch &amp; Handoff</h3>
+              <p>Full deployment, documentation, and a 30-day support window so you're never left stranded post-launch.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Primary CTA -->
+        <section class="cta-section" id="contact" data-testid="primary-cta">
+          <div class="cta-inner">
+            <div class="cta-badge">Let's build together</div>
+            <h2>Ready to ship something you're proud of?</h2>
+            <p>Whether you have a fully-scoped project or just a rough idea, I'd love to hear about it. Most projects start with a 30-minute call.</p>
+            <div class="cta-actions">
+              <a class="btn-primary btn-large btn-white" href="mailto:hello@alisherrik.dev">Start a Conversation</a>
+              <button class="btn-outline-white btn-large" type="button" id="cta-login-trigger">Access Client Portal</button>
+            </div>
+          </div>
+        </section>
+
       </main>
 
+      <!-- Footer -->
       <footer class="app-footer" data-testid="footer-section">
-        <div class="footer-brand"><div class="brand-mark brand-mark-sm">p</div><span class="brand-name">personal portfolio web</span></div>
-        <div class="footer-links"><a href="#home">Home</a></div>
+        <div class="footer-brand">
+          <div class="brand-mark brand-mark-sm">A</div>
+          <span class="brand-name">Alisher Rik</span>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Alisher Rik. Built with care.</p>
       </footer>
+
+    </div><!-- /.app-shell -->
+
+    <!-- Login Modal -->
+    <div class="modal-overlay" id="login-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close" aria-label="Close login modal">&times;</button>
+        <div class="modal-header">
+          <div class="brand-mark">A</div>
+          <div>
+            <h2 id="login-modal-title">Client Portal</h2>
+            <p>Sign in to track your project progress.</p>
+          </div>
+        </div>
+        <form class="login-form" id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Your password" autocomplete="current-password" required />
+          </div>
+          <div id="login-error" class="form-error" aria-live="polite"></div>
+          <button type="submit" class="btn-primary btn-full">Sign In</button>
+          <p class="form-footer">New client? <a href="mailto:hello@alisherrik.dev">Get access by email.</a></p>
+        </form>
+      </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
